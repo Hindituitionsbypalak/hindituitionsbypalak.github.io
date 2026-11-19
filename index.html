@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hindi Tuitions by Palak</title>
+<meta name="description" content="Hindi tuition for Nursery to Class 12, all boards — by Palak Pareek, M.A. Hindi Literature Gold Medalist, B.Ed., Banasthali Vidyapith. Enquire on WhatsApp.">
+<meta property="og:title" content="Hindi Tuitions by Palak · हिंदी ट्यूशन">
+<meta property="og:image" content="palak.jpg">
+<meta property="og:description" content="Nursery to Class 12 · All boards · Gold Medalist teacher. Enquire on WhatsApp: 63761 62488">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230b0709%27/%3E%3Ctext x=%2732%27 y=%2746%27 font-size=%2740%27 text-anchor=%27middle%27 fill=%27%23ff2e88%27 font-family=%27serif%27%3E%E0%A4%AA%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0b0709">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,500&family=Kalam:wght@400;700&family=Mukta:wght@400;500;600;700;800&family=Tiro+Devanagari+Hindi&family=Rozha+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0b0709; --night-2:#160d12;
+  --rani:#ff2e88; --peacock:#3a7bff; --leaf:#3ddc84; --marigold:#ffb627;
+  --paper:#f7f0e3; --paper-2:#efe4cf; --ink:#1e1216; --muted:#6b5a55; --wine:#5b0e25;
+  --serif:'Fraunces','Tiro Devanagari Hindi',serif;
+  --deva:'Rozha One','Tiro Devanagari Hindi',serif;
+  --hand:'Kalam',cursive;
+  --sans:'Mukta',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html[lang=hi] body{font-size:18px}
+a{color:inherit}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+#sky{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;display:block}
+main{position:relative;z-index:1;overflow-x:clip}
+.wrap{width:min(1180px,100% - 40px);margin:0 auto}
+
+/* ---------- NAV ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,backdrop-filter .3s}
+nav.solid{background:rgba(11,7,9,.72);backdrop-filter:blur(10px)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.logo b{font-family:'Tiro Devanagari Hindi',serif;font-size:28px;font-weight:400;color:var(--rani);line-height:1}
+.logo span{font-family:var(--serif);font-size:17px;line-height:1.05}
+.logo small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#cdbfc3}
+.links{display:flex;gap:22px;margin-left:auto}
+.links a{color:#e9dde0;text-decoration:none;font-size:15px;opacity:.85}
+.links a:hover{opacity:1;color:var(--marigold)}
+.lang{display:flex;border:1.5px solid rgba(255,255,255,.35);border-radius:40px;overflow:hidden;margin-left:8px}
+.lang button{padding:5px 12px;font-size:14px;color:#fff;font-weight:600}
+.lang button.on{background:#fff;color:var(--night)}
+.navwa{background:var(--leaf);color:#062b16;font-weight:700;padding:8px 16px;border-radius:40px;text-decoration:none;font-size:15px;white-space:nowrap}
+@media(max-width:860px){.links{display:none}.lang{margin-left:auto}.navwa{display:none}}
+
+/* ---------- HERO (window to the sky) ---------- */
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;color:#fff;padding:100px 0 70px}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,7,9,.88) 0%,rgba(11,7,9,.55) 45%,transparent 75%);pointer-events:none}
+.hero .wrap{position:relative;pointer-events:none}
+.hero .wrap > *{pointer-events:auto}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:14px;letter-spacing:2.5px;text-transform:uppercase;color:var(--marigold);font-weight:700}
+html[lang=hi] .kicker{letter-spacing:.5px;font-size:16px}
+.kicker::before{content:"";width:28px;height:2px;background:var(--marigold)}
+.hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(46px,7.6vw,104px);line-height:.98;letter-spacing:-1.5px;margin:18px 0 22px;max-width:11.5ch}
+html[lang=hi] .hero h1{font-family:var(--deva);font-weight:400;letter-spacing:0;line-height:1.15;max-width:12ch}
+.hero h1 em{font-style:italic;color:var(--rani);font-family:var(--hand);font-weight:700;display:inline-block;transform:rotate(-3deg);filter:url(#boil)}
+.hero p.lead{font-size:clamp(17px,1.6vw,20px);max-width:540px;color:#e6d9dc}
+.hero p.lead b{color:#fff}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:50px;font-weight:700;text-decoration:none;font-size:17px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn.wa{background:var(--leaf);color:#062b16;box-shadow:0 8px 30px rgba(61,220,132,.35)}
+.btn.call{border:2px solid rgba(255,255,255,.6);color:#fff}
+.btn.call:hover{background:#fff;color:var(--night)}
+.hint{margin-top:34px;font-family:var(--hand);font-size:20px;color:var(--rani);display:flex;align-items:center;gap:10px}
+.hint i{display:inline-block;animation:bob 1.6s ease-in-out infinite;font-style:normal}
+@keyframes bob{50%{transform:translateY(-5px) rotate(10deg)}}
+.scrolldown{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:#bba9ae;font-size:12px;letter-spacing:3px;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:6px}
+.scrolldown::after{content:"";width:2px;height:34px;background:linear-gradient(var(--rani),transparent);animation:drip 1.8s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* Letter card popup */
+#lcard{position:fixed;z-index:60;left:50%;bottom:28px;transform:translate(-50%,140%);transition:transform .45s cubic-bezier(.2,1.4,.4,1);background:#fff;color:var(--ink);border-radius:22px;padding:16px 22px 16px 16px;display:flex;align-items:center;gap:16px;box-shadow:0 20px 60px rgba(0,0,0,.5);max-width:calc(100% - 32px)}
+#lcard.show{transform:translate(-50%,0)}
+#lcard .big{font-family:'Tiro Devanagari Hindi',serif;font-size:64px;line-height:1;width:84px;height:84px;display:grid;place-items:center;background:var(--night);color:var(--rani);border-radius:16px;flex:none}
+#lcard .t{font-size:15px;color:var(--muted)}
+#lcard .w{font-family:var(--deva);font-size:28px;line-height:1.2;color:var(--wine)}
+#lcard .w span{font-size:30px}
+#lcard .say{margin-left:6px;width:44px;height:44px;border-radius:50%;background:var(--rani);color:#fff;display:grid;place-items:center;flex:none}
+#lcard .x{position:absolute;top:6px;right:10px;font-size:18px;color:#aaa}
+
+/* ---------- CREDENTIAL STRIP ---------- */
+.creds{background:var(--paper);position:relative}
+.creds .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.cred{padding:30px 22px;border-right:1.5px dashed #d9c9ad}
+.cred:last-child{border-right:none}
+.cred .n{font-family:var(--serif);font-weight:800;font-size:30px;color:var(--wine);line-height:1.1}
+html[lang=hi] .cred .n{font-family:var(--deva);font-weight:400}
+.cred .n i{font-style:normal;color:var(--rani)}
+.cred p{font-size:15px;color:var(--muted);margin-top:4px}
+@media(max-width:860px){.creds .wrap{grid-template-columns:1fr 1fr}.cred:nth-child(2){border-right:none}.cred{border-bottom:1.5px dashed #d9c9ad}}
+.edge{position:absolute;left:0;right:0;width:100%;height:26px;pointer-events:none}
+.edge.top{top:-25px}
+.edge.bot{bottom:-25px;transform:scaleY(-1)}
+.edge path{fill:var(--paper)}
+
+/* ---------- MARQUEE ---------- */
+.marq{background:var(--rani);color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0;transform:rotate(-1.2deg);margin:26px -20px 0;position:relative;z-index:2;box-shadow:0 10px 30px rgba(255,46,136,.25)}
+.marq div{display:inline-block;animation:marq 38s linear infinite;font-family:'Tiro Devanagari Hindi',serif;font-size:26px}
+.marq span{margin:0 22px}
+.marq span.e{font-family:var(--hand);font-weight:700;font-size:24px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- PAPER SECTIONS ---------- */
+.paper{background:var(--paper);padding:110px 0;position:relative}
+.paper.alt{background:var(--paper-2)}
+.eyebrow{font-family:var(--hand);font-size:22px;color:var(--rani);display:flex;align-items:center;gap:10px}
+.eyebrow b{font-family:var(--sans);font-size:13px;font-weight:800;color:var(--wine);background:#fff;border:1.5px solid var(--wine);border-radius:30px;padding:1px 10px}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(36px,5vw,62px);line-height:1.02;letter-spacing:-1px;color:var(--ink);margin:12px 0 18px;max-width:16ch}
+html[lang=hi] h2{font-family:var(--deva);font-weight:400;letter-spacing:0;line-height:1.2}
+h2 em{font-style:italic;color:var(--wine)}
+.intro{font-size:19px;color:var(--muted);max-width:620px}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* About */
+.about{display:grid;grid-template-columns:420px 1fr;gap:70px;align-items:center}
+@media(max-width:900px){.about{grid-template-columns:1fr;gap:40px}}
+.portrait{position:relative;width:min(380px,100%);aspect-ratio:1;margin:0 auto}
+.portrait .ph{position:absolute;inset:26px;border-radius:50%;overflow:hidden;background:#ff9cc6}
+.portrait .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.portrait svg.ring{position:absolute;inset:0;width:100%;height:100%;filter:url(#boil);overflow:visible}
+.portrait .medal{position:absolute;right:-4px;bottom:24px;width:118px;height:118px;border-radius:50%;background:conic-gradient(#8f621c,#f6dc9c,#b9842f,#fbe7b0,#9a6b1f,#f1d18a,#8f621c);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25);transform:rotate(8deg)}
+.portrait .medal div{width:98px;height:98px;border-radius:50%;background:var(--wine);color:#f6dc9c;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1.05;border:2px solid #f6dc9c}
+.portrait .medal b{font-family:var(--serif);font-size:22px}
+.portrait .medal small{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#fff}
+.portrait .note{position:absolute;left:-10px;top:8px;font-family:var(--hand);color:var(--wine);font-size:20px;transform:rotate(-8deg);background:#fff8;padding:2px 8px;border-radius:8px}
+.about p{font-size:18.5px;color:#3d2c2c;margin-bottom:16px;max-width:600px}
+.degrees{list-style:none;margin-top:26px;border-top:1.5px solid #d9c9ad}
+.degrees li{display:grid;grid-template-columns:90px 1fr auto;align-items:center;gap:16px;padding:14px 0;border-bottom:1.5px solid #d9c9ad}
+.degrees .d{font-family:var(--serif);font-weight:800;font-size:24px;color:var(--wine)}
+.degrees .tag{font-size:13px;font-weight:700;padding:3px 12px;border-radius:30px;background:#fff;border:1.5px solid #d9c9ad;color:var(--muted);white-space:nowrap}
+.degrees .tag.gold{background:linear-gradient(180deg,#fbe7b0,#d9a84e);border-color:#b9842f;color:#4a2c00}
+.uni{margin-top:14px;font-size:15px;color:var(--muted)}
+.uni b{color:var(--wine)}
+
+/* Journey */
+.journey{position:relative;margin-top:60px}
+.journey svg.path{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.journey svg.path path{fill:none;stroke:var(--rani);stroke-width:3;stroke-linecap:round}
+.journey svg.path path.ghost{stroke:#d9c9ad;stroke-dasharray:2 10}
+.stop{position:relative;width:46%;margin-bottom:70px;background:#fff;border-radius:24px;padding:30px 30px 26px;box-shadow:0 18px 50px rgba(91,14,37,.08)}
+.stop:nth-child(even){margin-left:auto}
+.stop:last-of-type{margin-bottom:0}
+.stop .dot{position:absolute;top:34px;width:22px;height:22px;border-radius:50%;background:var(--c);box-shadow:0 0 0 6px var(--paper),0 0 0 8px var(--c)}
+.stop:nth-child(odd) .dot{right:calc(-8.7% - 11px)}
+.stop:nth-child(even) .dot{left:calc(-8.7% - 11px)}
+.stop .lvl{font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--c)}
+.stop h3{font-family:var(--serif);font-weight:800;font-size:34px;line-height:1.1;margin:4px 0 10px}
+html[lang=hi] .stop h3{font-family:var(--deva);font-weight:400}
+.stop p{color:#4a3a38}
+.stop ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.stop li{font-size:14px;font-weight:600;padding:4px 12px;border-radius:30px;background:color-mix(in srgb,var(--c) 12%,#fff);color:var(--c)}
+.stop .doodle{position:absolute;right:20px;top:18px;font-family:var(--deva);font-size:54px;color:var(--c);opacity:.18;filter:url(#boil)}
+@media(max-width:860px){.stop,.stop:nth-child(even){width:auto;margin-left:34px}.stop .dot,.stop:nth-child(odd) .dot,.stop:nth-child(even) .dot{left:-45px;right:auto}}
+.boards{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:56px;justify-content:center}
+.boards span{font-weight:700;padding:8px 18px;border-radius:40px;border:2px solid var(--ink);background:#fff}
+.boards em{font-family:var(--hand);font-style:normal;font-size:22px;color:var(--rani);margin-right:6px}
+
+/* Approach */
+.ways{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
+@media(max-width:980px){.ways{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.ways{grid-template-columns:1fr}}
+.way{background:#fff;border-radius:22px;padding:26px 22px;position:relative;overflow:hidden;transition:transform .3s}
+.way:hover{transform:translateY(-6px) rotate(-.6deg)}
+.way .gl{font-family:var(--deva);font-size:62px;line-height:1;color:var(--c);filter:url(#boil);height:70px}
+.way h3{font-family:var(--serif);font-weight:800;font-size:23px;line-height:1.15;margin:14px 0 8px}
+html[lang=hi] .way h3{font-family:var(--deva);font-weight:400;font-size:25px}
+.way p{font-size:16px;color:var(--muted)}
+.way::after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;background:var(--c);opacity:.08}
+
+/* Quote window (sky shows through) */
+.window{position:relative;padding:150px 0;color:#fff;text-align:center}
+.window::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(11,7,9,.75),rgba(11,7,9,.35) 70%);pointer-events:none}
+.window .wrap{position:relative;pointer-events:none}
+.window blockquote{font-family:var(--deva);font-size:clamp(40px,6vw,84px);line-height:1.15}
+.window blockquote em{font-style:normal;color:var(--marigold)}
+.window p{max-width:760px;margin:22px auto 0;font-size:clamp(18px,1.8vw,22px);color:#efe2e5;font-family:var(--serif);font-style:italic}
+html[lang=hi] .window p{font-family:'Tiro Devanagari Hindi',serif;font-style:normal}
+
+/* Varnamala */
+.tabs{display:inline-flex;background:#fff;border-radius:40px;padding:5px;margin-top:34px;border:1.5px solid #d9c9ad}
+.tabs button{padding:8px 22px;border-radius:40px;font-weight:700;color:var(--muted)}
+.tabs button.on{background:var(--ink);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:12px;margin-top:26px}
+.tile{aspect-ratio:1;perspective:600px}
+.tile .in{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.3,1.4,.4,1);transform-style:preserve-3d}
+.tile.flip .in{transform:rotateY(180deg)}
+.tile .f,.tile .b{position:absolute;inset:0;border-radius:18px;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.tile .f{background:#fff;font-family:'Tiro Devanagari Hindi',serif;font-size:46px;color:var(--ink);box-shadow:0 4px 0 #d9c9ad;transition:background .2s}
+.tile:hover .f{background:#fff3f8;color:var(--rani)}
+.tile .b{background:var(--ink);color:#fff;transform:rotateY(180deg);text-align:center;padding:6px}
+.tile .b .e{font-size:30px;line-height:1.1}
+.tile .b .h{font-family:var(--deva);font-size:19px;color:var(--marigold);line-height:1.2}
+.tile .b .m{font-size:11.5px;color:#cbb9bd}
+
+/* FAQ */
+.faq{max-width:820px;margin-top:40px}
+.faq details{border-bottom:1.5px solid #d9c9ad;padding:20px 0}
+.faq summary{list-style:none;cursor:pointer;font-family:var(--serif);font-weight:600;font-size:22px;display:flex;justify-content:space-between;gap:20px}
+html[lang=hi] .faq summary{font-family:var(--sans);font-weight:700}
+.faq summary::after{content:"+";font-family:var(--hand);font-size:30px;line-height:.8;color:var(--rani);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin-top:10px;color:var(--muted);font-size:17.5px}
+
+/* Contact window */
+.contact{position:relative;padding:130px 0 90px;color:#fff}
+.contact::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,7,9,.55),rgba(11,7,9,.92));pointer-events:none}
+.contact .wrap{position:relative;display:grid;grid-template-columns:1fr 460px;gap:60px;align-items:center}
+@media(max-width:940px){.contact .wrap{grid-template-columns:1fr}}
+.contact h2{color:#fff}
+.contact h2 em{color:var(--rani)}
+.contact .intro{color:#d8c8cc}
+.bigphone{display:inline-block;margin-top:26px;font-family:var(--serif);font-weight:800;font-size:clamp(40px,5vw,64px);color:var(--marigold);text-decoration:none;letter-spacing:-1px}
+form{background:#fff;color:var(--ink);border-radius:26px;padding:30px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+form h3{font-family:var(--serif);font-size:26px;font-weight:800;line-height:1.1}
+html[lang=hi] form h3{font-family:var(--deva);font-weight:400}
+form .sub{font-size:14px;color:var(--muted);margin:4px 0 18px}
+label{display:block;font-size:13px;font-weight:700;letter-spacing:.5px;color:var(--muted);margin:12px 0 5px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border-radius:12px;border:1.5px solid #ddd0bd;background:#fbf8f2;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--rani);border-color:transparent}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form .btn{width:100%;justify-content:center;margin-top:20px}
+footer{position:relative;background:var(--night);color:#a89599;padding:34px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+footer b{font-family:var(--deva);font-weight:400;color:var(--rani);font-size:20px}
+
+/* floating WA */
+.fwa{position:fixed;right:18px;bottom:18px;z-index:55;width:60px;height:60px;border-radius:50%;background:var(--leaf);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .2s}
+.fwa:hover{transform:scale(1.08)}
+.fwa svg{width:32px;height:32px;fill:#062b16}
+.fwa::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--leaf);animation:ping 2s infinite}
+@keyframes ping{to{transform:scale(1.6);opacity:0}}
+
+/* ink cursor */
+#ink{position:fixed;left:-100px;top:-100px;width:14px;height:14px;border-radius:50%;background:var(--rani);pointer-events:none;z-index:100;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:width .2s,height .2s;display:none}
+@media(hover:hover){#ink{display:block}}
+#ink.big{width:46px;height:46px}
+
+@media(prefers-reduced-motion:reduce){.marq div,.hint i,.scrolldown::after,.fwa::before{animation:none}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- hand-drawn "boil" filter -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="boil"><feTurbulence id="turb" type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="1"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter>
+</svg>
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div id="ink"></div>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><b>प</b><span>Hindi Tuitions<small>by Palak</small></span></a>
+    <div class="links">
+      <a href="#about" data-en="Teacher" data-hi="शिक्षिका"></a>
+      <a href="#classes" data-en="Classes" data-hi="कक्षाएँ"></a>
+      <a href="#approach" data-en="Approach" data-hi="तरीका"></a>
+      <a href="#play" data-en="Varnamala" data-hi="वर्णमाला"></a>
+      <a href="#contact" data-en="Contact" data-hi="संपर्क"></a>
+    </div>
+    <div class="lang" role="group" aria-label="Language"><button data-l="en">EN</button><button data-l="hi">हिं</button></div>
+    <a class="navwa" href="#contact" data-en="Enquire" data-hi="पूछताछ"></a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero sky">
+    <div class="wrap">
+      <div class="kicker" data-en="Nursery – Class 12 · All Boards" data-hi="नर्सरी – कक्षा 12 · सभी बोर्ड"></div>
+      <h1 data-en="Hindi your child will <em>love</em> to learn." data-hi="ऐसी हिंदी, जिसे बच्चा <em>प्यार</em> से सीखे।"></h1>
+      <p class="lead" data-en="Personal Hindi tuition by <b>Palak Pareek</b> — M.A. Hindi Literature <b>Gold Medalist</b>, B.Ed., Ph.D. Hindi (pursuing), Banasthali Vidyapith." data-hi="<b>पलक पारीक</b> द्वारा व्यक्तिगत हिंदी ट्यूशन — एम.ए. हिंदी साहित्य <b>गोल्ड मेडलिस्ट</b>, B.Ed., Ph.D. हिंदी (अध्ययनरत), बनस्थली विद्यापीठ।"></p>
+      <div class="ctas">
+        <a class="btn wa" target="_blank" rel="noopener" data-wa><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg><span data-en="Enquire on WhatsApp" data-hi="व्हाट्सऐप पर पूछें"></span></a>
+        <a class="btn call" href="tel:+916376162488"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>63761 62488</a>
+      </div>
+      <div class="hint"><i>✦</i><span data-en="Tap a floating letter — it speaks!" data-hi="किसी तैरते अक्षर को छुएँ — वह बोलेगा!"></span></div>
+    </div>
+    <div class="scrolldown" data-en="Scroll" data-hi="नीचे चलें"></div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="creds">
+    <svg class="edge top" viewBox="0 0 1200 26" preserveAspectRatio="none"><path d="M0 26 L0 14 Q 40 2 80 12 T 160 10 T 240 14 T 320 8 T 400 13 T 480 9 T 560 14 T 640 7 T 720 13 T 800 10 T 880 14 T 960 8 T 1040 12 T 1120 9 T 1200 13 L1200 26Z"/></svg>
+    <div class="wrap">
+      <div class="cred reveal"><div class="n" data-en="Gold <i>Medal</i>" data-hi="गोल्ड <i>मेडल</i>"></div><p data-en="M.A. Hindi Literature" data-hi="एम.ए. हिंदी साहित्य"></p></div>
+      <div class="cred reveal"><div class="n">B.Ed.</div><p data-en="Trained teacher" data-hi="प्रशिक्षित शिक्षिका"></p></div>
+      <div class="cred reveal"><div class="n">Ph.D. <i data-en="Hindi" data-hi="हिंदी"></i></div><p data-en="Pursuing" data-hi="अध्ययनरत"></p></div>
+      <div class="cred reveal"><div class="n" data-en="Nursery–12" data-hi="नर्सरी–12"></div><p data-en="All boards" data-hi="सभी बोर्ड"></p></div>
+    </div>
+    <div class="marq"><div id="marq"></div></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="paper" id="about">
+    <div class="wrap about">
+      <div class="portrait reveal">
+        <div class="ph"><img src="palak.jpg?v=2" alt="Palak Pareek"></div>
+        <svg class="ring" viewBox="0 0 200 200"><circle cx="100" cy="100" r="92" fill="none" stroke="#1e1216" stroke-width="2.2" stroke-dasharray="300 8 40 6"/><circle cx="100" cy="100" r="97" fill="none" stroke="#ff2e88" stroke-width="1.6" stroke-dasharray="6 9"/></svg>
+        <div class="medal"><div><small>Gold</small><b>M.A.</b><small data-en="Medalist" data-hi="मेडलिस्ट"></small></div></div>
+        <div class="note" data-en="your teacher ✿" data-hi="आपकी शिक्षिका ✿"></div>
+      </div>
+      <div>
+        <div class="eyebrow reveal"><b>01</b><span data-en="Meet your teacher" data-hi="मिलिए अपनी शिक्षिका से"></span></div>
+        <h2 class="reveal" data-en="Palak <em>Pareek</em>" data-hi="पलक <em>पारीक</em>"></h2>
+        <p class="reveal" data-en="Palak's entire education has been at <b>Banasthali Vidyapith</b>, Rajasthan — from her B.A. and B.Ed. to an M.A. in Hindi Literature, which she completed as a <b>gold medalist</b>. Today she is pursuing her Ph.D. in Hindi." data-hi="पलक की संपूर्ण शिक्षा <b>बनस्थली विद्यापीठ</b>, राजस्थान से हुई है — B.A. और B.Ed. से लेकर हिंदी साहित्य में एम.ए. तक, जिसमें उन्हें <b>स्वर्ण पदक</b> मिला। वर्तमान में वे हिंदी में Ph.D. कर रही हैं।"></p>
+        <p class="reveal" data-en="She teaches with a scholar's depth and a teacher's patience. Every child gets her full attention, learns at their own pace, and discovers that Hindi can be beautiful — not just another subject." data-hi="वे एक विद्वान की गहराई और एक शिक्षिका के धैर्य के साथ पढ़ाती हैं। हर बच्चे पर पूरा ध्यान, उसकी अपनी गति से पढ़ाई — ताकि बच्चा जाने कि हिंदी सिर्फ़ एक विषय नहीं, एक सुंदर भाषा है।"></p>
+        <ul class="degrees reveal">
+          <li><span class="d">B.A.</span><span data-en="Graduation" data-hi="स्नातक"></span><span></span></li>
+          <li><span class="d">B.Ed.</span><span data-en="Bachelor of Education" data-hi="शिक्षा स्नातक"></span><span class="tag" data-en="Trained teacher" data-hi="प्रशिक्षित"></span></li>
+          <li><span class="d">M.A.</span><span data-en="Hindi Literature" data-hi="हिंदी साहित्य"></span><span class="tag gold" data-en="🥇 Gold Medalist" data-hi="🥇 गोल्ड मेडलिस्ट"></span></li>
+          <li><span class="d">Ph.D.</span><span data-en="Hindi" data-hi="हिंदी"></span><span class="tag" data-en="Pursuing" data-hi="अध्ययनरत"></span></li>
+        </ul>
+        <div class="uni reveal" data-en="All degrees from <b>Banasthali Vidyapith, Rajasthan</b>" data-hi="सभी उपाधियाँ — <b>बनस्थली विद्यापीठ, राजस्थान</b>"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASSES / JOURNEY -->
+  <section class="paper alt" id="classes">
+    <div class="wrap">
+      <div class="eyebrow reveal"><b>02</b><span data-en="Every class, every stage" data-hi="हर कक्षा, हर स्तर"></span></div>
+      <h2 class="reveal" data-en="From the first <em>अ</em> to the board exam." data-hi="पहले <em>अ</em> से बोर्ड परीक्षा तक।"></h2>
+      <p class="intro reveal" data-en="One teacher who can carry your child all the way — from playful letters in nursery to scoring answers in Class 12." data-hi="एक ही शिक्षिका, पूरे सफ़र के लिए — नर्सरी के खेल-खेल वाले अक्षरों से लेकर कक्षा 12 के अंक दिलाने वाले उत्तरों तक।"></p>
+
+      <div class="journey" id="journey">
+        <svg class="path" id="jpath"><path class="ghost" id="jghost"/><path id="jline"/></svg>
+        <div class="stop reveal" style="--c:#e8590c"><span class="dot"></span><span class="doodle">अ</span>
+          <div class="lvl" data-en="Pre-Primary" data-hi="पूर्व-प्राथमिक"></div>
+          <h3 data-en="Nursery · LKG · UKG" data-hi="नर्सरी · एल.के.जी. · यू.के.जी."></h3>
+          <p data-en="Letters, matras and first words through rhymes, stories and play — with neat, beautiful handwriting from day one." data-hi="कविता, कहानी और खेल के ज़रिए अक्षर, मात्राएँ और पहले शब्द — और पहले दिन से साफ़, सुंदर लिखावट।"></p>
+          <ul><li data-en="Varnamala" data-hi="वर्णमाला"></li><li data-en="Rhymes &amp; stories" data-hi="कविता-कहानी"></li><li data-en="Handwriting" data-hi="लिखावट"></li></ul>
+        </div>
+        <div class="stop reveal" style="--c:#b07d00"><span class="dot"></span><span class="doodle">क</span>
+          <div class="lvl" data-en="Primary" data-hi="प्राथमिक"></div>
+          <h3 data-en="Class 1 – 5" data-hi="कक्षा 1 – 5"></h3>
+          <p data-en="Fluent reading, correct pronunciation, the foundations of grammar — and steady help with school homework." data-hi="धाराप्रवाह पढ़ना, सही उच्चारण, व्याकरण की नींव — और स्कूल के होमवर्क में नियमित मदद।"></p>
+          <ul><li data-en="Reading" data-hi="पठन"></li><li data-en="Pronunciation" data-hi="उच्चारण"></li><li data-en="Grammar basics" data-hi="व्याकरण"></li><li data-en="Homework" data-hi="होमवर्क"></li></ul>
+        </div>
+        <div class="stop reveal" style="--c:#1f7a4d"><span class="dot"></span><span class="doodle">ज्ञ</span>
+          <div class="lvl" data-en="Middle" data-hi="माध्यमिक"></div>
+          <h3 data-en="Class 6 – 8" data-hi="कक्षा 6 – 8"></h3>
+          <p data-en="Grammar and composition, essays and letter writing, comprehension and thorough textbook practice." data-hi="व्याकरण और रचना, निबंध व पत्र-लेखन, अपठित गद्यांश और पाठ्यपुस्तक का पूरा अभ्यास।"></p>
+          <ul><li data-en="Essays" data-hi="निबंध"></li><li data-en="Letters" data-hi="पत्र-लेखन"></li><li data-en="Comprehension" data-hi="अपठित"></li></ul>
+        </div>
+        <div class="stop reveal" style="--c:#7d1836"><span class="dot"></span><span class="doodle">श्र</span>
+          <div class="lvl" data-en="Board classes" data-hi="बोर्ड कक्षाएँ"></div>
+          <h3 data-en="Class 9 – 12" data-hi="कक्षा 9 – 12"></h3>
+          <p data-en="Board-exam preparation, prose and poetry, literature — and the art of writing answers that score." data-hi="बोर्ड परीक्षा की तैयारी, गद्य-पद्य और साहित्य — और ऐसे उत्तर लिखने की कला जो अंक दिलाएँ।"></p>
+          <ul><li data-en="Board prep" data-hi="बोर्ड तैयारी"></li><li data-en="Literature" data-hi="साहित्य"></li><li data-en="Answer writing" data-hi="उत्तर-लेखन"></li></ul>
+        </div>
+      </div>
+
+      <div class="boards reveal"><em data-en="all boards →" data-hi="सभी बोर्ड →"></em><span>CBSE</span><span>ICSE</span><span>State Board</span><span>IB / IGCSE</span></div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="paper" id="approach">
+    <div class="wrap">
+      <div class="eyebrow reveal"><b>03</b><span data-en="Why parents choose Palak" data-hi="अभिभावक क्यों चुनते हैं"></span></div>
+      <h2 class="reveal" data-en="Taught with <em>skill</em>, and with love." data-hi="<em>काबिलियत</em> भी, स्नेह भी।"></h2>
+      <div class="ways">
+        <div class="way reveal" style="--c:#ff2e88"><div class="gl">शु</div><h3 data-en="Pure pronunciation" data-hi="शुद्ध उच्चारण"></h3><p data-en="Every sound spoken right — so reading and speaking become confident and clear." data-hi="हर ध्वनि का सही उच्चारण — ताकि पढ़ना और बोलना आत्मविश्वास भरा हो।"></p></div>
+        <div class="way reveal" style="--c:#3a7bff"><div class="gl">लि</div><h3 data-en="Beautiful handwriting" data-hi="सुंदर लिखावट"></h3><p data-en="Neat letters, correct matras and well-formed sentences on every page." data-hi="साफ़ अक्षर, सही मात्राएँ और हर पन्ने पर सुंदर वाक्य।"></p></div>
+        <div class="way reveal" style="--c:#1f9d5c"><div class="gl">व्या</div><h3 data-en="Grammar made easy" data-hi="आसान व्याकरण"></h3><p data-en="Rules explained with simple examples, regular practice and tests." data-hi="आसान उदाहरणों से नियम, नियमित अभ्यास और टेस्ट।"></p></div>
+        <div class="way reveal" style="--c:#e8590c"><div class="gl">स्ने</div><h3 data-en="Patience &amp; personal attention" data-hi="धैर्य और व्यक्तिगत ध्यान"></h3><p data-en="Each child is taught at their own pace — with warmth, never pressure." data-hi="हर बच्चे को उसकी गति से — प्यार से, दबाव से नहीं।"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE WINDOW -->
+  <section class="window sky">
+    <div class="wrap">
+      <blockquote class="reveal" data-en="अपने बच्चों को सिखाएँ <em>शुद्ध हिंदी</em>" data-hi="अपने बच्चों को सिखाएँ <em>शुद्ध हिंदी</em>"></blockquote>
+      <p class="reveal" data-en="Teach your children pure Hindi — so they stay rooted in their mother tongue and motherland, and even as English grows ever more important, they learn to value Hindi and give it a meaningful place in their lives." data-hi="ताकि वे अपनी मातृभाषा और मातृभूमि से जुड़े रहें, और अंग्रेज़ी के बढ़ते दौर में भी हिंदी का सम्मान करें व उसे जीवन में अहम स्थान दें।"></p>
+    </div>
+  </section>
+
+  <!-- VARNAMALA -->
+  <section class="paper alt" id="play">
+    <div class="wrap">
+      <div class="eyebrow reveal"><b>04</b><span data-en="Try it with your child" data-hi="बच्चे के साथ खेलें"></span></div>
+      <h2 class="reveal" data-en="Play the <em>Varnamala</em>." data-hi="खेलें <em>वर्णमाला</em>।"></h2>
+      <p class="intro reveal" data-en="Tap any letter to hear it and see a word that starts with it." data-hi="किसी भी अक्षर को छुएँ — उसे सुनें और उससे शुरू होने वाला शब्द देखें।"></p>
+      <div class="tabs"><button class="on" data-t="swar" data-en="Vowels · स्वर" data-hi="स्वर"></button><button data-t="vyanjan" data-en="Consonants · व्यंजन" data-hi="व्यंजन"></button></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="paper" id="faq">
+    <div class="wrap">
+      <div class="eyebrow reveal"><b>05</b><span data-en="Good to know" data-hi="जानने योग्य"></span></div>
+      <h2 class="reveal" data-en="Questions parents <em>ask</em>." data-hi="अभिभावकों के <em>सवाल</em>।"></h2>
+      <div class="faq">
+        <details class="reveal"><summary data-en="Which classes do you teach?" data-hi="किन कक्षाओं को पढ़ाती हैं?"></summary><p data-en="All of them — Nursery, LKG and UKG, and Class 1 all the way to Class 12." data-hi="सभी — नर्सरी, एल.के.जी., यू.के.जी. और कक्षा 1 से कक्षा 12 तक।"></p></details>
+        <details class="reveal"><summary data-en="Which boards?" data-hi="कौन-से बोर्ड?"></summary><p data-en="CBSE, ICSE, State Boards and IB / IGCSE. Lessons follow your child's own school syllabus." data-hi="CBSE, ICSE, स्टेट बोर्ड और IB / IGCSE। पढ़ाई बच्चे के अपने स्कूल के सिलेबस के अनुसार होती है।"></p></details>
+        <details class="reveal"><summary data-en="Do you help with board exams?" data-hi="क्या बोर्ड परीक्षा की तैयारी करवाती हैं?"></summary><p data-en="Yes. For Classes 9–12 the focus is on the syllabus, literature, grammar and writing answers the way examiners expect." data-hi="हाँ। कक्षा 9–12 में सिलेबस, साहित्य, व्याकरण और परीक्षक की अपेक्षा के अनुसार उत्तर-लेखन पर पूरा ध्यान।"></p></details>
+        <details class="reveal"><summary data-en="What are the fees and timings?" data-hi="फ़ीस और समय क्या है?"></summary><p data-en="Send your child's class and board on WhatsApp and Palak will reply with the details." data-hi="व्हाट्सऐप पर बच्चे की कक्षा और बोर्ड भेजें — पलक आपको पूरी जानकारी देंगी।"></p></details>
+        <details class="reveal"><summary data-en="How do we start?" data-hi="शुरुआत कैसे करें?"></summary><p data-en="Fill the short form below or call 63761 62488. That's it." data-hi="नीचे का छोटा-सा फ़ॉर्म भरें या 63761 62488 पर कॉल करें। बस इतना ही।"></p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT WINDOW -->
+  <section class="contact sky" id="contact">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow reveal"><b>06</b><span data-en="Let's begin" data-hi="चलिए शुरू करें"></span></div>
+        <h2 class="reveal" data-en="Give your child the gift of <em>Hindi</em>." data-hi="अपने बच्चे को दें <em>हिंदी</em> का उपहार।"></h2>
+        <p class="intro reveal" data-en="Need a Hindi tutor? Message or call Palak today." data-hi="हिंदी ट्यूटर चाहिए? आज ही पलक को संदेश या कॉल करें।"></p>
+        <a class="bigphone reveal" href="tel:+916376162488">63761 62488</a>
+      </div>
+      <form id="enq" class="reveal">
+        <h3 data-en="Quick enquiry" data-hi="त्वरित पूछताछ"></h3>
+        <div class="sub" data-en="Opens WhatsApp with your message ready to send." data-hi="आपका संदेश तैयार होकर व्हाट्सऐप में खुलेगा।"></div>
+        <label data-en="Parent's name" data-hi="अभिभावक का नाम"></label>
+        <input name="name" required>
+        <div class="row">
+          <div><label data-en="Child's class" data-hi="बच्चे की कक्षा"></label>
+            <select name="cls" required><option>Nursery</option><option>LKG</option><option>UKG</option><option>Class 1</option><option>Class 2</option><option>Class 3</option><option>Class 4</option><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option></select></div>
+          <div><label data-en="Board" data-hi="बोर्ड"></label>
+            <select name="board"><option>CBSE</option><option>ICSE</option><option>State Board</option><option>IB / IGCSE</option><option>Other</option></select></div>
+        </div>
+        <label data-en="Message (optional)" data-hi="संदेश (वैकल्पिक)"></label>
+        <textarea name="msg" rows="2"></textarea>
+        <button class="btn wa" type="submit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span data-en="Send on WhatsApp" data-hi="व्हाट्सऐप पर भेजें"></span></button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div><b>पलक</b> &nbsp;Hindi Tuitions by Palak · हिंदी ट्यूशन</div>
+      <div data-en="Nursery – Class 12 · All boards · 63761 62488" data-hi="नर्सरी – कक्षा 12 · सभी बोर्ड · 63761 62488"></div>
+    </div>
+  </footer>
+</main>
+
+<a class="fwa" target="_blank" rel="noopener" data-wa aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg></a>
+
+<div id="lcard" role="dialog" aria-live="polite">
+  <div class="big" id="lc-big">अ</div>
+  <div><div class="t" id="lc-t"></div><div class="w" id="lc-w"></div></div>
+  <button class="say" id="lc-say" aria-label="Listen"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+  <button class="x" id="lc-x" aria-label="Close">×</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const PHONE = '916376162488';
+
+/* ================= LETTER DATA ================= */
+const SWAR = [
+  ['अ','a','अनानास','pineapple','🍍'],['आ','aa','आम','mango','🥭'],['इ','i','इंद्रधनुष','rainbow','🌈'],
+  ['ई','ee','ईंट','brick','🧱'],['उ','u','उल्लू','owl','🦉'],['ऊ','oo','ऊन','wool','🧶'],
+  ['ऋ','ri','ऋषि','sage','🧘'],['ए','e','एक','one','1️⃣'],['ऐ','ai','ऐनक','spectacles','👓'],
+  ['ओ','o','ओस','dew','💧'],['औ','au','औज़ार','tools','🔧'],['अं','am','अंगूर','grapes','🍇'],['अः','ah','प्रातः','morning','🌅']
+];
+const VYANJAN = [
+  ['क','ka','कबूतर','pigeon','🕊️'],['ख','kha','खरगोश','rabbit','🐇'],['ग','ga','गमला','flower pot','🪴'],
+  ['घ','gha','घड़ी','clock','⏰'],['च','cha','चम्मच','spoon','🥄'],['छ','chha','छतरी','umbrella','☂️'],
+  ['ज','ja','जहाज़','ship','🚢'],['झ','jha','झंडा','flag','🚩'],['ट','ṭa','टमाटर','tomato','🍅'],
+  ['ड','ḍa','डमरू','damru drum','🪘'],['ढ','ḍha','ढोलक','dholak','🥁'],['त','ta','तितली','butterfly','🦋'],
+  ['द','da','दवात','ink pot','🖋️'],['ध','dha','धनुष','bow','🏹'],['न','na','नल','tap','🚰'],
+  ['प','pa','पतंग','kite','🪁'],['फ','pha','फूल','flower','🌸'],['ब','ba','बतख','duck','🦆'],
+  ['भ','bha','भालू','bear','🐻'],['म','ma','मछली','fish','🐟'],['र','ra','रेलगाड़ी','train','🚂'],
+  ['स','sa','सेब','apple','🍎'],['ह','ha','हाथी','elephant','🐘']
+];
+const ALL = Object.fromEntries([...SWAR,...VYANJAN].map(r=>[r[0],r]));
+
+/* ================= i18n ================= */
+let LANG = 'en';
+try{ LANG = localStorage.getItem('htp-lang') || 'en'; }catch(e){}
+function applyLang(l){
+  LANG = l; document.documentElement.lang = l;
+  document.querySelectorAll('[data-en]').forEach(el=>{ el.innerHTML = el.dataset[l] || el.dataset.en; });
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on', b.dataset.l===l));
+  try{ localStorage.setItem('htp-lang', l); }catch(e){}
+  buildMarquee(); requestAnimationFrame(drawJourney);
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>applyLang(b.dataset.l));
+
+/* WhatsApp links */
+function waLink(text){ return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(text); }
+document.querySelectorAll('[data-wa]').forEach(a=>{
+  a.addEventListener('click',()=>{ a.href = waLink(LANG==='hi' ? 'नमस्ते पलक जी, मुझे अपने बच्चे के लिए हिंदी ट्यूशन के बारे में जानकारी चाहिए।' : 'Hello Palak, I would like to know about Hindi tuition for my child.'); });
+  a.href = waLink('Hello Palak, I would like to know about Hindi tuition for my child.');
+});
+document.getElementById('enq').addEventListener('submit',e=>{
+  e.preventDefault(); const f = new FormData(e.target);
+  const msg = (LANG==='hi'
+    ? `नमस्ते पलक जी,\nमैं ${f.get('name')} हूँ। मुझे अपने बच्चे के लिए हिंदी ट्यूशन चाहिए।\nकक्षा: ${f.get('cls')}\nबोर्ड: ${f.get('board')}`
+    : `Hello Palak,\nI'm ${f.get('name')}. I'm looking for Hindi tuition for my child.\nClass: ${f.get('cls')}\nBoard: ${f.get('board')}`)
+    + (f.get('msg') ? `\n${f.get('msg')}` : '');
+  window.open(waLink(msg),'_blank','noopener');
+});
+
+/* Marquee */
+function buildMarquee(){
+  const en = ['Reading','Writing','Grammar','Literature','Pronunciation','Board prep','Stories','Poems'];
+  const hi = ['पठन','लेखन','व्याकरण','साहित्य','उच्चारण','बोर्ड तैयारी','कहानियाँ','कविताएँ'];
+  const letters = 'अ आ इ ई उ ऊ ए ऐ ओ औ क ख ग घ'.split(' ');
+  let s=''; for(let i=0;i<letters.length;i++){ s+=`<span>${letters[i]}</span><span class="e">${(LANG==='hi'?hi:en)[i%8]}</span>`; }
+  document.getElementById('marq').innerHTML = s + s;
+}
+
+/* ================= SPEECH ================= */
+let hiVoice=null;
+function pickVoice(){ const v=speechSynthesis.getVoices(); hiVoice = v.find(x=>/hi[-_]IN/i.test(x.lang)) || v.find(x=>/^hi/i.test(x.lang)) || null; }
+if('speechSynthesis' in window){ pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+function speak(t){
+  if(!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(t);
+  u.lang='hi-IN'; if(hiVoice) u.voice=hiVoice; u.rate=.8; speechSynthesis.speak(u);
+}
+
+/* Letter card */
+const lcard=document.getElementById('lcard'); let lcTimer;
+function showLetter(ch){
+  const r = ALL[ch];
+  if(ch==='moon'){
+    document.getElementById('lc-big').textContent='☾';
+    document.getElementById('lc-t').textContent = LANG==='hi'?'चाँद · chaand':'चाँद · chaand — the moon';
+    document.getElementById('lc-w').innerHTML = 'चंदा मामा दूर के <span>🌙</span>';
+    document.getElementById('lc-say').onclick=()=>speak('चंदा मामा दूर के');
+    speak('चाँद');
+  } else if(r){
+    document.getElementById('lc-big').textContent=r[0];
+    document.getElementById('lc-t').textContent = `${r[1]} · ${LANG==='hi'? 'जैसे':'as in'}`;
+    document.getElementById('lc-w').innerHTML = `${r[2]} <span>${r[4]}</span>` + (LANG==='en'?` <small style="font-family:Mukta;font-size:15px;color:#6b5a55">(${r[3]})</small>`:'');
+    document.getElementById('lc-say').onclick=()=>speak(r[0]+'... '+r[2]);
+    speak(r[0]+'... '+r[2]);
+  }
+  lcard.classList.add('show'); clearTimeout(lcTimer); lcTimer=setTimeout(()=>lcard.classList.remove('show'),7000);
+}
+document.getElementById('lc-x').onclick=()=>lcard.classList.remove('show');
+
+/* Varnamala grid */
+const grid=document.getElementById('grid');
+function buildGrid(set){
+  grid.innerHTML='';
+  (set==='swar'?SWAR:VYANJAN).forEach(r=>{
+    const t=document.createElement('button'); t.className='tile';
+    t.innerHTML=`<div class="in"><div class="f">${r[0]}</div><div class="b"><div class="e">${r[4]}</div><div class="h">${r[2]}</div><div class="m">${r[1]} · ${r[3]}</div></div></div>`;
+    t.onclick=()=>{ const was=t.classList.contains('flip'); grid.querySelectorAll('.flip').forEach(x=>x.classList.remove('flip')); if(!was){t.classList.add('flip'); speak(r[0]+'... '+r[2]);} };
+    grid.appendChild(t);
+  });
+}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{ document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b)); buildGrid(b.dataset.t); });
+buildGrid('swar');
+
+/* ================= REVEAL + NAV ================= */
+const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay = (i%4)*90+'ms'; io.observe(el); });
+const nav=document.getElementById('nav');
+
+/* Journey path (draws with scroll) */
+const journey=document.getElementById('journey'), jl=document.getElementById('jline'), jg=document.getElementById('jghost'), jsvg=document.getElementById('jpath');
+let jLen=0;
+function drawJourney(){
+  const W=journey.clientWidth, H=journey.clientHeight; if(!W) return;
+  jsvg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  const mobile = W<860-40;
+  const dots=[...journey.querySelectorAll('.dot')].map(d=>{ const r=d.getBoundingClientRect(), jr=journey.getBoundingClientRect(); return [r.left-jr.left+r.width/2, r.top-jr.top+r.height/2]; });
+  let d=`M ${dots[0][0]} ${dots[0][1]}`;
+  let prev=dots[0];
+  dots.slice(1).forEach((p,i)=>{
+    const mid=(prev[1]+p[1])/2, sway = mobile?0:(i%2?-70:70);
+    d+=` C ${prev[0]+sway} ${mid}, ${p[0]-sway} ${mid}, ${p[0]} ${p[1]}`; prev=p;
+  });
+  jl.setAttribute('d',d); jg.setAttribute('d',d);
+  jLen=jl.getTotalLength(); jl.style.strokeDasharray=jLen; onScroll();
+}
+function onScroll(){
+  nav.classList.toggle('solid', scrollY>40);
+  if(jLen){ const r=journey.getBoundingClientRect(); const p=Math.min(1,Math.max(0,(innerHeight*.7 - r.top)/r.height)); jl.style.strokeDashoffset = jLen*(1-p); }
+}
+addEventListener('scroll',onScroll,{passive:true});
+addEventListener('resize',()=>requestAnimationFrame(drawJourney));
+
+/* boil filter: step the noise seed like hand-drawn animation */
+const turb=document.getElementById('turb'); let seed=1;
+setInterval(()=>{ seed=(seed%5)+1; turb.setAttribute('seed',seed); },140);
+
+/* ink cursor */
+const ink=document.getElementById('ink');
+addEventListener('pointermove',e=>{ ink.style.left=e.clientX+'px'; ink.style.top=e.clientY+'px'; });
+document.querySelectorAll('a,button,.tile,summary').forEach(el=>{ el.addEventListener('pointerenter',()=>ink.classList.add('big')); el.addEventListener('pointerleave',()=>ink.classList.remove('big')); });
+
+applyLang(LANG);
+
+/* ================= THREE.JS SKY ================= */
+(function(){
+  if(!window.THREE) return;
+  const canvas=document.getElementById('sky');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let renderer; try{ renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false}); }catch(e){ return; }
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2)); renderer.setClearColor(0x0b0709,1);
+  const scene=new THREE.Scene(); const cam=new THREE.PerspectiveCamera(50,1,.1,100); cam.position.z=10;
+  let viewW=10, viewH=10;
+  function resize(){ const w=innerWidth,h=innerHeight; renderer.setSize(w,h,false); cam.aspect=w/h; cam.updateProjectionMatrix(); viewH=2*10*Math.tan(25*Math.PI/180); viewW=viewH*cam.aspect; }
+  resize(); addEventListener('resize',resize);
+
+  /* --- strokes: rain + ground scribbles, one instanced shader --- */
+  function strokes(n, make){
+    const g=new THREE.InstancedBufferGeometry(); const base=new THREE.PlaneGeometry(1,1);
+    g.index=base.index; g.setAttribute('position',base.getAttribute('position')); g.setAttribute('uv',base.getAttribute('uv'));
+    const off=new Float32Array(n*3), sp=new Float32Array(n), len=new Float32Array(n), wid=new Float32Array(n), ang=new Float32Array(n), col=new Float32Array(n*3), sd=new Float32Array(n);
+    for(let i=0;i<n;i++){ const s=make(i); off.set(s.o,i*3); sp[i]=s.s; len[i]=s.l; wid[i]=s.w; ang[i]=s.a; col.set(s.c,i*3); sd[i]=Math.random(); }
+    const A=(a,k)=>new THREE.InstancedBufferAttribute(a,k);
+    g.setAttribute('aOff',A(off,3)); g.setAttribute('aSpeed',A(sp,1)); g.setAttribute('aLen',A(len,1)); g.setAttribute('aWid',A(wid,1)); g.setAttribute('aAng',A(ang,1)); g.setAttribute('aCol',A(col,3)); g.setAttribute('aSeed',A(sd,1));
+    g.instanceCount=n; return g;
+  }
+  const uniforms={uTime:{value:0},uBoil:{value:0},uMouse:{value:new THREE.Vector2(99,99)},uWind:{value:0},uH:{value:22},uScroll:{value:0}};
+  const mat=new THREE.ShaderMaterial({uniforms,transparent:true,depthWrite:false,
+    vertexShader:`
+      attribute vec3 aOff; attribute float aSpeed,aLen,aWid,aAng,aSeed; attribute vec3 aCol;
+      uniform float uTime,uBoil,uWind,uH,uScroll; uniform vec2 uMouse;
+      varying vec3 vCol; varying vec2 vUv; varying float vA;
+      float h(float n){return fract(sin(n)*43758.5453);}
+      void main(){
+        vec3 c=aOff; float a=aAng;
+        float b=floor(uBoil);
+        if(aSpeed>0.){ c.y=mod(aOff.y-uTime*aSpeed+uScroll*aSpeed*.6,uH)-uH*.5; a+=uWind; c.x+=c.y*.25*-uWind; }
+        else { c.y+=uScroll*.0; }
+        a+=(h(aSeed*91.+b)-.5)*.12; c.xy+=(vec2(h(aSeed*13.+b),h(aSeed*7.+b))-.5)*.03;
+        vec2 d=c.xy-uMouse; float f=exp(-dot(d,d)/1.6);
+        c.xy+=normalize(d+.0001)*f*.9; a+=f*sign(d.x)*.9;
+        vec2 p=vec2(position.x*aWid,position.y*aLen);
+        float cs=cos(a),sn=sin(a); p=vec2(p.x*cs-p.y*sn,p.x*sn+p.y*cs);
+        vec4 mv=modelViewMatrix*vec4(c+vec3(p,0.),1.);
+        gl_Position=projectionMatrix*mv; vCol=aCol; vUv=uv; vA=.55+.45*smoothstep(-6.,2.,aOff.z);
+      }`,
+    fragmentShader:`
+      varying vec3 vCol; varying vec2 vUv; varying float vA;
+      void main(){ float t=smoothstep(0.,.18,vUv.y)*smoothstep(1.,.75,vUv.y); float e=1.-smoothstep(.35,.5,abs(vUv.x-.5));
+        gl_FragColor=vec4(vCol,t*e*vA*.9); }`
+  });
+  const R=new THREE.Color('#ff2e88'), B=new THREE.Color('#3a7bff'), G=new THREE.Color('#3ddc84'), M=new THREE.Color('#ffb627');
+  const N = innerWidth<700 ? 900 : 1900;
+  const rain=new THREE.Mesh(strokes(N,()=>{ const r=Math.random(); const c=r<.82?R:(r<.95?B:M);
+    return {o:[(Math.random()-.5)*34,Math.random()*22,(Math.random()*9)-6],s:1.2+Math.random()*1.6,l:.18+Math.random()*.35,w:.025+Math.random()*.02,a:.55+Math.random()*.15,c:[c.r,c.g,c.b]}; }),mat);
+  rain.frustumCulled=false; scene.add(rain);
+  const ground=new THREE.Mesh(strokes(innerWidth<700?500:1100,()=>{ const r=Math.random(); const c=r<.6?R:(r<.92?B:G);
+    const y=-3.1-Math.pow(Math.random(),.7)*3.2;
+    return {o:[(Math.random()-.5)*30,y,(Math.random()*3)-1.5],s:0,l:.15+Math.random()*.9,w:.02+Math.random()*.03,a:Math.PI/2+(Math.random()-.5)*.35,c:[c.r,c.g,c.b]}; }),mat);
+  ground.frustumCulled=false; scene.add(ground);
+
+  /* --- sketchy letter sprites --- */
+  const sprites=[]; const letterSet=['अ','आ','इ','क','ख','ग','प','म','ह','त','ज','ओ','ई','र'];
+  const palette=['#ff2e88','#ffffff','#3ddc84','#ffb627','#7fb0ff'];
+  function sketchTex(draw, seed){
+    const c=document.createElement('canvas'); c.width=c.height=256; const x=c.getContext('2d');
+    let s=seed; const rnd=()=>{ s=(s*9301+49297)%233280; return s/233280; };
+    draw(x,rnd); const t=new THREE.CanvasTexture(c); t.minFilter=THREE.LinearFilter; return t;
+  }
+  function letterDraw(ch,col){ return (x,rnd)=>{
+    x.font='700 168px Kalam, "Tiro Devanagari Hindi", sans-serif'; x.textAlign='center'; x.textBaseline='middle';
+    x.globalAlpha=.12; x.fillStyle=col; x.fillText(ch,128,140);
+    x.globalAlpha=.95; x.strokeStyle=col; x.lineJoin='round';
+    for(let i=0;i<3;i++){ x.lineWidth=2+rnd()*2.5; x.strokeText(ch,128+(rnd()-.5)*7,140+(rnd()-.5)*7); }
+    x.globalAlpha=.6; x.lineWidth=1.5; for(let i=0;i<10;i++){ const yy=95+rnd()*95; x.beginPath(); x.moveTo(70+rnd()*40,yy); x.lineTo(150+rnd()*40,yy-12-rnd()*10); x.stroke(); }
+  };}
+  function moonDraw(x,rnd){
+    x.strokeStyle='#3ddc84'; x.lineCap='round';
+    for(let i=0;i<5;i++){ x.lineWidth=3+rnd()*4; x.beginPath(); x.arc(128+(rnd()-.5)*5,128+(rnd()-.5)*5,78,Math.PI*.15,Math.PI*1.25); x.stroke(); }
+    x.strokeStyle='#ff2e88'; x.lineWidth=2.5; x.beginPath(); x.arc(150,108,62,Math.PI*.2,Math.PI*1.1); x.stroke();
+  }
+  function make(drawFn,size,data){
+    const texs=[0,1,2].map(k=>sketchTex(drawFn,data.seed*7+k*131+1));
+    const m=new THREE.SpriteMaterial({map:texs[0],transparent:true,depthWrite:false});
+    const sp=new THREE.Sprite(m); sp.scale.set(size,size,1); sp.userData={...data,texs,size};
+    scene.add(sp); sprites.push(sp); return sp;
+  }
+  function buildLetters(){
+    letterSet.forEach((ch,i)=>{
+      const col=palette[i%palette.length]; const z=-2.5+Math.random()*3.5;
+      const wide = innerWidth>860;
+      const x = wide ? (-.02 + (i/letterSet.length)*.48)*viewW + (Math.random()-.5)*.8 : (i/letterSet.length-.5)*viewW*.9;
+      const y = wide ? -1.8+Math.random()*5 : (Math.random()<.5 ? 2.2+Math.random()*1.6 : -3.4+Math.random()*1.2);
+      make(letterDraw(ch,col), (wide?1.1:.8)+Math.random()*.8, {ch, seed:i+3, base:new THREE.Vector3(x, y, z), ph:Math.random()*6.28});
+    });
+    const moon=make(moonDraw,2.1,{ch:'moon',seed:99,base:new THREE.Vector3(viewW*.36,3.4,-3),ph:0});
+  }
+  (document.fonts && document.fonts.load ? Promise.all([document.fonts.load('700 168px Kalam','अ'),document.fonts.load('40px "Tiro Devanagari Hindi"','अ')]).catch(()=>{}) : Promise.resolve()).then(buildLetters);
+
+  /* --- interaction --- */
+  const mouse=new THREE.Vector2(), ndc=new THREE.Vector2(9,9); let hovered=null; let wind=0;
+  const ray=new THREE.Raycaster();
+  addEventListener('pointermove',e=>{
+    ndc.set(e.clientX/innerWidth*2-1, -(e.clientY/innerHeight)*2+1);
+    wind = (ndc.x)*.25;
+  });
+  function pick(){
+    ray.setFromCamera(ndc,cam); const hit=ray.intersectObjects(sprites)[0]; return hit?hit.object:null;
+  }
+  function skyTarget(t){ return t.closest && t.closest('.sky') && !t.closest('a,button,input,select,textarea,form,label,blockquote,h1,p'); }
+  addEventListener('click',e=>{
+    if(!skyTarget(e.target)) return;
+    ndc.set(e.clientX/innerWidth*2-1, -(e.clientY/innerHeight)*2+1);
+    const s=scrollY<innerHeight*.6?pick():null; if(s){ s.userData.pop=1; showLetter(s.userData.ch); }
+  });
+
+  /* pause when no sky visible */
+  let visible=true; const skies=[...document.querySelectorAll('.sky')]; const vis=new Set();
+  const so=new IntersectionObserver(es=>{ es.forEach(e=>e.isIntersecting?vis.add(e.target):vis.delete(e.target)); visible=vis.size>0; if(visible) loop(); },{threshold:0});
+  skies.forEach(s=>so.observe(s));
+
+  const clock=new THREE.Clock(); let running=false, t=0;
+  function loop(){ if(running) return; running=true; requestAnimationFrame(frame); }
+  function frame(){
+    if(!visible){ running=false; return; }
+    const dt=Math.min(clock.getDelta(),.05); t+=dt*(reduce?.25:1);
+    uniforms.uTime.value=t; uniforms.uBoil.value=t*7;
+    uniforms.uWind.value+= (wind-uniforms.uWind.value)*.03;
+    uniforms.uMouse.value.set(ndc.x*viewW/2, ndc.y*viewH/2);
+    uniforms.uScroll.value = scrollY/innerHeight;
+    cam.position.y = -Math.min(scrollY/innerHeight,1)*.6;
+    const bf=Math.floor(t*7); const lo=Math.max(0,1-scrollY/(innerHeight*.8));
+    sprites.forEach((s,i)=>{
+      const u=s.userData; s.material.map=u.texs[(bf+i)%3]; s.material.opacity=lo; s.visible=lo>0.01;
+      s.position.set(u.base.x+Math.sin(t*.4+u.ph)*.35, u.base.y+Math.sin(t*.7+u.ph)*.25, u.base.z);
+      s.material.rotation=Math.sin(t*.5+u.ph)*.12;
+      u.pop=(u.pop||0)*.92; const k=u.size*(1+u.pop*.5+(s===hovered?.15:0)); s.scale.set(k,k,1);
+    });
+    // hover only when pointer over sky area
+    const el=document.elementFromPoint((ndc.x+1)/2*innerWidth,(1-ndc.y)/2*innerHeight);
+    const h = el && skyTarget(el) ? pick() : null;
+    if(h!==hovered){ hovered=h; document.body.style.cursor=h?'pointer':''; ink.classList.toggle('big',!!h); }
+    renderer.render(scene,cam);
+    requestAnimationFrame(frame);
+  }
+  loop();
+})();
+</script>
+</body>
+</html>
